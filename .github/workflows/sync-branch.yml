@@ -42,4 +42,4 @@ jobs:
           git fetch origin
           git switch ${{ env.branch_name }} || git switch -c ${{ env.branch_name }}
           git reset --hard origin/main
-          git push origin ${{ env.branch_name }}
+          git push origin ${{ env.branch_name }} --force
