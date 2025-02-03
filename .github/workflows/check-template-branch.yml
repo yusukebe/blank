@@ -16,7 +16,6 @@ jobs:
       - name: Get create-hono version
         id: get_version
         run: |
-          # `create-hono` のバージョンを取得
           VERSION=$(jq -r .version package.json)
           MAJOR_MINOR=$(echo "$VERSION" | cut -d '.' -f 1,2)
           echo "Detected version: $VERSION"
