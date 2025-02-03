@@ -23,10 +23,10 @@ jobs:
         with:
           node-version: 22
 
-      - name: Get hono version
+      - name: Get create-hono version
         id: get_version
         run: |
-          VERSION=$(npm show hono version)
+          VERSION=$(npm show create-hono version)
           MAJOR_MINOR=$(echo "$VERSION" | cut -d '.' -f 1,2)
           echo "Detected version: $VERSION"
           echo "Branch name: v$MAJOR_MINOR"
